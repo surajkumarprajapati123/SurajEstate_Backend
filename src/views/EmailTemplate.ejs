@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Email</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #b67c7c;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #007bff;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      strong {
+        font-weight: bold;
+        color: #007bff;
+      }
+      .greeting {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .logo {
+        max-width: 250px;
+        margin-bottom: 20px;
+        border-radius: 30%;
+        margin-left: 200px;
+      }
+
+      .suraj {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 235px;
+      }
+      .suraj-border {
+        border: 2px solid red;
+        border-radius: 5px;
+        animation: border-color-animation 2s infinite alternate;
+        padding: 5px;
+        margin: auto;
+        width: 100%;
+        display: inline-block;
+      }
+
+      @keyframes border-color-animation {
+        0% {
+          background-color: red;
+          color: white;
+          border-color: red;
+        }
+        50% {
+          border-color: blue;
+        }
+        100% {
+          background-color: rgb(188, 118, 194);
+          color: white;
+          border-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="suraj-border">
+        <h1 class="suraj">SurajEstate</h1>
+      </div>
+      <img
+        src="https://pbs.twimg.com/profile_images/1731667763289292800/_kUhBbAu_400x400.jpg"
+        alt="Company Logo"
+        class="logo"
+      />
+      <h2>One-Time Password (OTP) Verification</h2>
+      <p class="greeting">Hello, <%= name%></p>
+      <p>
+        Your One-Time Password (OTP) for verification is:
+        <strong><%= otp%></strong>
+      </p>
+
+      <p>If you did not request this OTP, please ignore this email.</p>
+      <p>Thank you,</p>
+      <p><b>SurajEstate</b></p>
+    </div>
+  </body>
+</html>
